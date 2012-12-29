@@ -1,0 +1,10 @@
+{
+  "name": "drone-xbox",
+  "version": "0.0.1",
+  "start": "coffee drone-xbox.coffee",
+  "dependencies": {
+    "coffee-script": ">=0",
+    "ar-drone":  ">=0",
+    "node-xbox-controller": "git://github.com/andrew/node-xbox-controller.git"
+  }
+}
