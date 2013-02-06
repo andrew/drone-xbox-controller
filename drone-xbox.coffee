@@ -1,8 +1,11 @@
 XboxController = require "node-xbox-controller"
 Drone = require './drone'
+arDrone = require 'ar-drone'
 
 xbox = new XboxController
 drone = new Drone(0.5)
+
+client = arDrone.createClient()
 
 xbox.on "start:press", (key) ->
   console.log "start press (takeoff)"
@@ -15,6 +18,10 @@ xbox.on "back:press", (key) ->
 xbox.on "a:press", (key) ->
   console.log "a press (stop)"
   drone.stop()
+
+xbox.on "xboxbutton:press", (key) ->
+  console.log "xboxbutton press (reset)"
+  client.disableEmergency()
 
 xbox.on "righttrigger", (position) ->
   console.log "righttrigger", position/255

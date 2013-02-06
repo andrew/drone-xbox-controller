@@ -25,8 +25,12 @@ class Drone
   stop: =>
     @pcmd = {}
 
+  reset: =>
+    @pcmd = {}
+    @ref.emergency = true
+    @ref.fly = false
+
   move: (directions, reset = true) =>
-    console.log reset
     @pcmd = {} if reset
     for direction, speed of directions
       s = speed || @speed
