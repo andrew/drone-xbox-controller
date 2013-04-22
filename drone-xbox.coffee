@@ -1,4 +1,4 @@
-XboxController = require "node-xbox-controller"
+XboxController = require "xbox-controller"
 Drone = require './drone'
 arDrone = require 'ar-drone'
 
