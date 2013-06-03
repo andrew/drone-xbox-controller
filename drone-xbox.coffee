@@ -21,7 +21,7 @@ xbox.on "a:press", (key) ->
 
 xbox.on "xboxbutton:press", (key) ->
   console.log "xboxbutton press (reset)"
-  client.disableEmergency()
+  drone.reset()
 
 xbox.on "righttrigger", (position) ->
   console.log "righttrigger", position / 255
