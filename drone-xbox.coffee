@@ -41,3 +41,18 @@ xbox.on "right:move", (position) ->
   console.log "right:move", {x: x}
   drone.move({clockwise: x}, false)
 
+xbox.on "dup:press", (key) ->
+  console.log('D up (flip front)')
+  client.animate('flipAhead', 1500);
+  
+xbox.on "ddown:press", (key) ->
+  console.log('D down (flip back)')
+  client.animate('flipBehind', 1500);
+  
+xbox.on "dleft:press", (key) ->
+  console.log('D left (flip left)')
+  client.animate('flipLeft', 1500);
+  
+xbox.on "dright:press", (key) ->
+  console.log('D right (flip right)')
+  client.animate('flipRight', 1500);
