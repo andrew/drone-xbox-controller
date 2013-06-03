@@ -24,17 +24,17 @@ xbox.on "xboxbutton:press", (key) ->
   client.disableEmergency()
 
 xbox.on "righttrigger", (position) ->
-  console.log "righttrigger", position/255
-  drone.setSpeed(0.5 + position/255)
+  console.log "righttrigger", position / 255
+  drone.setSpeed(0.5 + position / 255)
 
 xbox.on "left:move", (position) ->
-  x = position.x/32768
-  y = position.y/32768
+  x = position.x / 32768
+  y = position.y / 32768
   console.log "left:move", {x: x, y: y}
   drone.move({right: x, back: y}, false)
   
 xbox.on "right:move", (position) ->
-  x = position.x/32768
-  y = position.y/32768
+  x = position.x / 32768
+  y = position.y / 32768
   console.log "right:move", {x: x, y: y}
   drone.move({clockwise: x, down: y}, false)
