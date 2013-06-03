@@ -15,10 +15,6 @@ xbox.on "back:press", (key) ->
   console.log "back press (land)"
   drone.land()
 
-xbox.on "a:press", (key) ->
-  console.log "a press (stop)"
-  drone.stop()
-
 xbox.on "xboxbutton:press", (key) ->
   console.log "xboxbutton press (reset)"
   drone.reset()
