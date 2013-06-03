@@ -7,6 +7,14 @@ drone = new Drone(0.5)
 
 client = arDrone.createClient()
 
+client.config('control:altitude_max', 200000)
+client.config('control:control_vz_max', 2000)
+client.config('control:control_yaw', 6.0)
+client.config('control:euler_angle_max', 0.52)
+
+client.config('control:outdoor', false)
+client.config('control:flight_without_shell', false)
+
 maxAngle = 32768
 
 xbox.on "start:press", (key) ->
