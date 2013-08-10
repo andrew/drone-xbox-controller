@@ -5,6 +5,6 @@
   "dependencies": {
     "coffee-script": ">=0",
     "ar-drone":  ">=0",
-    "xbox-controller": ">=0.1.0"
+    "xbox-controller": "git://github.com/andrew/node-xbox-controller.git#21687d0"
   }
 }

@@ -1,10 +1,10 @@
 arDrone = require("ar-drone")
 
 class Drone
-  constructor: (speed) ->
+  constructor: (speed, ip='192.168.1.1') ->
     @speed = speed
     @accel = 0.01
-    @control = arDrone.createUdpControl()
+    @control = arDrone.createUdpControl({ip:ip})
     @ref = {}
     @pcmd = {}
     @rate = 30
