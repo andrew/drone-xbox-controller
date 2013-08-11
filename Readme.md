@@ -16,12 +16,18 @@ coffee drone-xbox.coffee
 
 ## Controls
 
-* start => takeoff
-* back => land
-* a => stop/hover
+* start => takeoff / land
+* x => fire (animate leds)
+* y => blink lights
 * left stick => front/back, left/right
 * right stick => up/down, counterClockwise/clockwise
-* right trigger => increase speed
+* right stick press => turnaround
+* right shoulder (rb) => increase speed
+* left shoulder (lb) => decrease speed
+* d pad will flip in direction pressed
+
+## LED
+The controller will light up based on percentage of battery left. 4 = full, 1 = 25% and will start flashing when low
 
 ## TODO
 
